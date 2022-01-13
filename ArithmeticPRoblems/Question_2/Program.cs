@@ -1,20 +1,20 @@
-﻿//  Purpose:    Write a program that will prompt the user for three real numbers and computes 
-//              their mean average. Display the average to the user.
+﻿//Purpose :     Modify the program from question 1 so that it will round 
+//              the mean average to two decimal places.
 //  input:      firstNumber, secondNumber, thirdNumber
 //  output:     meanAverage
 //Algorithm:    Step 1) Prompt user for inputs
 //              Step 2) Calculate for the mean average "(a + b + c) / 3"
-//              Step 3) Display result
+//              Step 3) Display result in two decimal places.
 
 using System;
 
-namespace Question_1
+namespace Question_2
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Mean Average Calculator\n");
+            Console.WriteLine("Mean Average Calculator(with two decimal places)\n");
             //get user input
             Console.Write("Enter the first real number: ");
             double firstNumber = double.Parse(Console.ReadLine());
@@ -29,9 +29,8 @@ namespace Question_1
             double meanAverage = (firstNumber + secondNumber + thirdNumber) / 3;
 
             //display result
-            Console.WriteLine($"\nThe average is {meanAverage}");
+            Console.WriteLine($"\nThe average is {meanAverage:f2}");
             Console.ReadLine();
-
         }
     }
 }
