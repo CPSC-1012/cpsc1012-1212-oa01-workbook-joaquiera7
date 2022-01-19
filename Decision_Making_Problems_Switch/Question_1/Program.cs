@@ -82,6 +82,12 @@ namespace Question_1
                         }
                         break;
                     }
+
+                case 'C':
+                case 'c':
+                    userBill = formulaPackageC;
+                    Console.WriteLine($"{userBill:c2}");
+                    break;
                 default:
                     Console.WriteLine("Invalid Input.");
                     break;
