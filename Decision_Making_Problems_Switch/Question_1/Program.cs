@@ -26,7 +26,52 @@ namespace Question_1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Welcome to ISP");
+
+            //prompt for user input(servicePackage, numberOfHours
+            Console.Write("Your service package (A, B, C): ");
+            char servicePackage = char.Parse(Console.ReadLine());
+
+            //make the input(servicePackage) lowercase
+            //string servicePackageLower = servicePackage.ToLower();
+
+            Console.WriteLine(servicePackage);
+            Console.Write("Number of hours you have used: ");
+            double numberOfHours = double.Parse(Console.ReadLine());
+
+            //basic formula for packages (not including excess hours)
+            double formulaPackageA = 9.95 * numberOfHours;
+            double formulaPackageB = 13.95 * numberOfHours;
+            double formulaPackageC = 19.95 * numberOfHours;
+
+            //identify which package to use for calculation
+            double userBill;
+            switch (servicePackage)
+            {
+                //Package A
+                case 'A':
+                case 'a':
+                    switch (numberOfHours)
+                    {
+                        case <= 10:
+                            userBill = formulaPackageA;
+                            Console.WriteLine($"{userBill:c2}");
+                            break;
+                        case > 10:
+                            userBill = formulaPackageA + ((numberOfHours - 10) * 2);
+                            Console.WriteLine($"{userBill:c2}");
+                            break;
+                        default:
+                            break;
+                    }
+                    break;
+
+                default:
+                    Console.WriteLine("Invalid Input.");
+                    break;
+            }
+
+            
         }
     }
 }
