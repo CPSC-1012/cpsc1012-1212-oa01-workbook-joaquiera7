@@ -66,6 +66,22 @@ namespace Question_1
                     }
                     break;
 
+                case 'B':
+                case 'b':
+                    {
+                        switch (numberOfHours)
+                        {
+                            case <= 20:
+                                userBill = formulaPackageB;
+                                Console.WriteLine($"{userBill:c2}");
+                                break;
+                            case > 20:
+                                userBill = formulaPackageB - ((numberOfHours - 20) * 1);
+                                Console.WriteLine($"{userBill:c2}");
+                                break;
+                        }
+                        break;
+                    }
                 default:
                     Console.WriteLine("Invalid Input.");
                     break;
