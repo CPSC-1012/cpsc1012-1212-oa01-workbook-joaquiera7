@@ -123,11 +123,12 @@ namespace Question_2
                             break;
                     }
                     break;
+
                 //inches to centimeters
                 case 'c':
                 case 'C':
                     Console.WriteLine("Option 1: inches --> centimeter");
-                    Console.WriteLine("Option 2: centimeter--> inches");
+                    Console.WriteLine("Option 2: centimeter --> inches");
 
                     Console.Write("Option: ");
                     int optionC = int.Parse(Console.ReadLine());
@@ -158,6 +159,47 @@ namespace Question_2
                             //result
                             Console.WriteLine($"{userNumber} kilograms = " +
                                             $"{inches} inches.");
+                            break;
+                        default:
+                            break;
+                    }
+                    break;
+
+                //fahrenheit to celsius
+                case 'd':
+                case 'D':
+                    Console.WriteLine("Option 1: fahrenheit --> celsius");
+                    Console.WriteLine("Option 2: celsius --> fahrenheit");
+
+                    Console.Write("Option: ");
+                    int optionD = int.Parse(Console.ReadLine());
+                    switch (optionD)
+                    {
+                        //if user looking for celsius
+                        case 1:
+                            //prompt user for value of fahrenheit
+                            Console.Write("Fahrenheit: ");
+                            userNumber = double.Parse(Console.ReadLine());
+
+                            //calculate celsius
+                            double celsius = (userNumber - 32) / 1.800;
+                            //result
+                            Console.WriteLine($"{userNumber} fahrenheit= " +
+                                                $"{celsius} celsius.");
+                            break;
+
+                        //if user looking for fahrenheit
+                        case 2:
+                            //prompt user for value of celsius
+                            Console.Write("Celsius: ");
+                            userNumber = double.Parse(Console.ReadLine());
+
+                            //calculate fahrenheit
+                            double fahrenheit = (userNumber * 1.800) + 32;
+
+                            //result
+                            Console.WriteLine($"{userNumber} celsius = " +
+                                            $"{fahrenheit} fahrenheit.");
                             break;
                         default:
                             break;
