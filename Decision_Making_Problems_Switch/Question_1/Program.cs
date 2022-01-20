@@ -26,19 +26,21 @@ namespace Question_1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Welcome to ISP");
+            Console.WriteLine("\t\tWelcome to Internet Slowest Provider");
+            Console.ReadLine();
 
             //prompt for user input(servicePackage, numberOfHours
-            Console.Write("Your service package (A, B, C): ");
+            Console.Write("Pick your service package (A, B, C): ");
             char servicePackage = char.Parse(Console.ReadLine());
 
             Console.Write("Number of hours you have used: ");
             double numberOfHours = double.Parse(Console.ReadLine());
 
-            //basic formula for packages (not including excess hours)
-            double formulaPackageA = 9.95 * numberOfHours;
-            double formulaPackageB = 13.95 * numberOfHours;
-            double formulaPackageC = 19.95 * numberOfHours;
+            Console.WriteLine("\n- - - - - - - - - - - - - - - - - - -\n");
+            //base price for packages (not including excess hours)
+            double pricePackageA = 9.95;
+            double pricePackageB = 13.95;
+            double pricePackageC = 19.95;
 
             //identify which package to use for calculation then display result
             //use userBill for output
@@ -52,13 +54,13 @@ namespace Question_1
                     {
                         //less than or equal to 10 hrs
                         case <= 10:
-                            userBill = formulaPackageA;
-                            Console.WriteLine($"Your bill is {userBill:c2}.");
+                            userBill = pricePackageA;
+                            Console.WriteLine($"Your monthly bill is {userBill:c2}.");
                             break;
                         //over 10 hours
                         case > 10:
-                            userBill = formulaPackageA + ((numberOfHours - 10) * 2);
-                            Console.WriteLine($"Your bill is {userBill:c2}.");
+                            userBill = pricePackageA + ((numberOfHours - 10) * 2);
+                            Console.WriteLine($"Your monthly bill is {userBill:c2}.");
                             break;
                         default:
                             break;
@@ -73,13 +75,13 @@ namespace Question_1
                         {
                             //less than or equal 20hrs
                             case <= 20:
-                                userBill = formulaPackageB;
-                                Console.WriteLine($"Your bill is {userBill:c2}.");
+                                userBill = pricePackageB;
+                                Console.WriteLine($"Your monthly bill is {userBill:c2}.");
                                 break;
                             //over 20hrs
                             case > 20:
-                                userBill = formulaPackageB - ((numberOfHours - 20) * 1);
-                                Console.WriteLine($"Your bill is {userBill:c2}.");
+                                userBill = pricePackageB - ((numberOfHours - 20) * 1);
+                                Console.WriteLine($"Your monthly bill is {userBill:c2}.");
                                 break;
                         }
                         break;
@@ -88,13 +90,16 @@ namespace Question_1
                 //Package C
                 case 'C':
                 case 'c':
-                    userBill = formulaPackageC;
-                    Console.WriteLine($"Your bill is {userBill:c2}.");
+                    userBill = pricePackageC;
+                    Console.WriteLine($"Your monthly bill is {userBill:c2}.");
                     break;
                 default:
-                    Console.WriteLine("Invalid Input.");
+                    Console.WriteLine("\nInvalid Input.");
                     break;
             }
+
+            Console.WriteLine("\nPress any key to exit . . . .");
+            Console.ReadKey(true);
             
         }
     }
