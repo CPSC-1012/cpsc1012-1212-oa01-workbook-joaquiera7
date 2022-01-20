@@ -49,8 +49,8 @@ namespace Question_2
                     Console.WriteLine("Option 2: Kilogram --> Pounds");
 
                     Console.Write("Option: ");
-                    int option = int.Parse(Console.ReadLine());
-                    switch (option)
+                    int optionA = int.Parse(Console.ReadLine());
+                    switch (optionA)
                     {
                         //if user looking for kilogram
                         case 1:
@@ -58,7 +58,7 @@ namespace Question_2
                             Console.Write("Pounds: ");
                             userNumber = double.Parse(Console.ReadLine());
                             
-                            //calculate
+                            //calculate kilogram
                             double kilogram = userNumber / 2.2046;
                             //result
                             Console.WriteLine($"{userNumber} pounds = {kilogram} " +
@@ -71,12 +71,52 @@ namespace Question_2
                             Console.Write("Kilogram: ");
                             userNumber = double.Parse(Console.ReadLine());
                             
-                            //calculate
+                            //calculate pounds
                             double pounds = userNumber * 2.2046;
 
                             //result
                             Console.WriteLine($"{userNumber} kilograms = {pounds} " +
                                               $"pounds.");
+                            break;
+                        default:
+                            break;
+                    }
+                    break;
+
+                case 'b':
+                case 'B':
+                    Console.WriteLine("Option 1: Fluid Ounces(U.S) --> Liters");
+                    Console.WriteLine("Option 2: Liters--> Fluid Ounces(U.S)");
+
+                    Console.Write("Option: ");
+                    int optionB = int.Parse(Console.ReadLine());
+                    switch (optionB)
+                    {
+                        //if user looking for Fluid Ounces(U.S)
+                        case 1:
+                            //prompt user for value of Liters
+                            Console.Write("Liters: ");
+                            userNumber = double.Parse(Console.ReadLine());
+
+                            //calculate fluid ounces
+                            double fluidOunces = userNumber * 33.8140226;
+
+                            //result
+                            Console.WriteLine($"{userNumber} liters = {fluidOunces} "                           +$"fluid Ounces(U.S).");
+                            break;
+
+                        //if user looking for liters
+                        case 2:
+                            //prompt user for value of liters
+                            Console.Write("Fluid Ounces(U.S): ");
+                            userNumber = double.Parse(Console.ReadLine());
+
+                            //calculate liters
+                            double liters =userNumber / 33.8140226;
+
+                            //result
+                            Console.WriteLine($"{userNumber} ounces = {liters}" +
+                                                $"liters.");
                             break;
                         default:
                             break;
