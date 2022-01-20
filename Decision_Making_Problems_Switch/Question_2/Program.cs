@@ -83,6 +83,7 @@ namespace Question_2
                     }
                     break;
 
+                //fluid ounces to liter vice versa
                 case 'b':
                 case 'B':
                     Console.WriteLine("Option 1: Fluid Ounces(U.S) --> Liters");
@@ -117,6 +118,46 @@ namespace Question_2
                             //result
                             Console.WriteLine($"{userNumber} ounces = {liters}" +
                                                 $"liters.");
+                            break;
+                        default:
+                            break;
+                    }
+                    break;
+                //inches to centimeters
+                case 'c':
+                case 'C':
+                    Console.WriteLine("Option 1: inches --> centimeter");
+                    Console.WriteLine("Option 2: centimeter--> inches");
+
+                    Console.Write("Option: ");
+                    int optionC = int.Parse(Console.ReadLine());
+                    switch (optionC)
+                    {
+                        //if user looking for centimeter
+                        case 1:
+                            //prompt user for value of inches
+                            Console.Write("inches: ");
+                            userNumber = double.Parse(Console.ReadLine());
+
+                            //calculate inches
+                            double centimeter = userNumber / 0.39370;
+                            //result
+                            Console.WriteLine($"{userNumber} inches = " +
+                                                $"{centimeter} centimeters.");
+                            break;
+
+                        //if user looking for inches
+                        case 2:
+                            //prompt user for value of centimeter
+                            Console.Write("Centimeter: ");
+                            userNumber = double.Parse(Console.ReadLine());
+
+                            //calculate inches
+                            double inches = userNumber * 0.39370;
+
+                            //result
+                            Console.WriteLine($"{userNumber} kilograms = " +
+                                            $"{inches} inches.");
                             break;
                         default:
                             break;
