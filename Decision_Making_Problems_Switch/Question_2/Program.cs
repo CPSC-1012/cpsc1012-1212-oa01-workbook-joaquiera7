@@ -23,15 +23,14 @@ namespace Question_2
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Unit Converter");
-            Console.ReadLine();
+            Console.WriteLine("\t\t\tUnit Converter\n");
 
             //prompt user input(unitConverter)
             Console.WriteLine("Converter A: Pounds <--> Kilograms");
             Console.WriteLine("Converter B: Fluid Ounces(U.S) <--> Liters");
             Console.WriteLine("Converter C: Inches <--> Centimeters");
-            Console.WriteLine("Converter D: Fahrenheit <--> Celsius");
-            Console.Write("Pick which converter you want to use" +
+            Console.WriteLine("Converter D: Fahrenheit <--> Celsius\n");
+            Console.Write("Which converter you want to use" +
                             "(A, B, C, D): ");
             char unitConverter = char.Parse(Console.ReadLine());
             //Console.WriteLine(unitConverter);
@@ -45,17 +44,17 @@ namespace Question_2
                 //Pounds to kilogram vice versa
                 case 'a':
                 case 'A':
-                    Console.WriteLine("Option 1: Pounds --> Kilogram");
+                    Console.WriteLine("\nOption 1: Pounds --> Kilogram");
                     Console.WriteLine("Option 2: Kilogram --> Pounds");
 
-                    Console.Write("Option: ");
+                    Console.Write("\nOption: ");
                     int optionA = int.Parse(Console.ReadLine());
                     switch (optionA)
                     {
                         //if user looking for kilogram
                         case 1:
                             //prompt user for value of pounds
-                            Console.Write("Pounds: ");
+                            Console.Write("\nPounds: ");
                             userNumber = double.Parse(Console.ReadLine());
                             
                             //calculate kilogram
@@ -68,7 +67,7 @@ namespace Question_2
                         //if user looking for pounds
                         case 2:
                             //prompt user for value of kilogram
-                            Console.Write("Kilogram: ");
+                            Console.Write("\nKilogram: ");
                             userNumber = double.Parse(Console.ReadLine());
                             
                             //calculate pounds
@@ -79,6 +78,7 @@ namespace Question_2
                                               $"pounds.");
                             break;
                         default:
+                            Console.WriteLine("\nInvalid Input.");
                             break;
                     }
                     break;
@@ -86,17 +86,17 @@ namespace Question_2
                 //fluid ounces to liter vice versa
                 case 'b':
                 case 'B':
-                    Console.WriteLine("Option 1: Fluid Ounces(U.S) --> Liters");
+                    Console.WriteLine("\nOption 1: Fluid Ounces(U.S) --> Liters");
                     Console.WriteLine("Option 2: Liters--> Fluid Ounces(U.S)");
 
-                    Console.Write("Option: ");
+                    Console.Write("\nOption: ");
                     int optionB = int.Parse(Console.ReadLine());
                     switch (optionB)
                     {
                         //if user looking for Fluid Ounces(U.S)
                         case 1:
                             //prompt user for value of Liters
-                            Console.Write("Liters: ");
+                            Console.Write("\nLiters: ");
                             userNumber = double.Parse(Console.ReadLine());
 
                             //calculate fluid ounces
@@ -109,7 +109,7 @@ namespace Question_2
                         //if user looking for liters
                         case 2:
                             //prompt user for value of liters
-                            Console.Write("Fluid Ounces(U.S): ");
+                            Console.Write("\nFluid Ounces(U.S): ");
                             userNumber = double.Parse(Console.ReadLine());
 
                             //calculate liters
@@ -120,6 +120,7 @@ namespace Question_2
                                                 $"liters.");
                             break;
                         default:
+                            Console.WriteLine("\nInvalid Input.");
                             break;
                     }
                     break;
@@ -127,17 +128,17 @@ namespace Question_2
                 //inches to centimeters
                 case 'c':
                 case 'C':
-                    Console.WriteLine("Option 1: inches --> centimeter");
+                    Console.WriteLine("\nOption 1: inches --> centimeter");
                     Console.WriteLine("Option 2: centimeter --> inches");
 
-                    Console.Write("Option: ");
+                    Console.Write("\nOption: ");
                     int optionC = int.Parse(Console.ReadLine());
                     switch (optionC)
                     {
                         //if user looking for centimeter
                         case 1:
                             //prompt user for value of inches
-                            Console.Write("inches: ");
+                            Console.Write("\ninches: ");
                             userNumber = double.Parse(Console.ReadLine());
 
                             //calculate inches
@@ -150,7 +151,7 @@ namespace Question_2
                         //if user looking for inches
                         case 2:
                             //prompt user for value of centimeter
-                            Console.Write("Centimeter: ");
+                            Console.Write("\nCentimeter: ");
                             userNumber = double.Parse(Console.ReadLine());
 
                             //calculate inches
@@ -161,6 +162,7 @@ namespace Question_2
                                             $"{inches} inches.");
                             break;
                         default:
+                            Console.WriteLine("\nInvalid Input.");
                             break;
                     }
                     break;
@@ -168,17 +170,17 @@ namespace Question_2
                 //fahrenheit to celsius
                 case 'd':
                 case 'D':
-                    Console.WriteLine("Option 1: fahrenheit --> celsius");
+                    Console.WriteLine("\nOption 1: fahrenheit --> celsius");
                     Console.WriteLine("Option 2: celsius --> fahrenheit");
 
-                    Console.Write("Option: ");
+                    Console.Write("\nOption: ");
                     int optionD = int.Parse(Console.ReadLine());
                     switch (optionD)
                     {
                         //if user looking for celsius
                         case 1:
                             //prompt user for value of fahrenheit
-                            Console.Write("Fahrenheit: ");
+                            Console.Write("\nFahrenheit: ");
                             userNumber = double.Parse(Console.ReadLine());
 
                             //calculate celsius
@@ -191,7 +193,7 @@ namespace Question_2
                         //if user looking for fahrenheit
                         case 2:
                             //prompt user for value of celsius
-                            Console.Write("Celsius: ");
+                            Console.Write("\nCelsius: ");
                             userNumber = double.Parse(Console.ReadLine());
 
                             //calculate fahrenheit
@@ -202,13 +204,18 @@ namespace Question_2
                                             $"{fahrenheit} fahrenheit.");
                             break;
                         default:
+                            Console.WriteLine("\nInvalid Input.");
                             break;
                     }
                     break;
                 default:
+                    Console.WriteLine("\nInvalid Input.");
                     break;
-
             }
+
+            Console.ReadLine();
+            Console.WriteLine("Exiting . . . . ");
+            Console.ReadKey(true);
             
 
         }
