@@ -20,7 +20,45 @@ namespace Question_1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("\tCOIN FLIP");
+
+            //prompt user for their guess
+            Console.WriteLine("Take your guess\n\n0 if Heads\n1 if Tails");
+            Console.Write("\nYour pick (0 or 1): ");
+            int userGuess = int.Parse(Console.ReadLine());
+            Console.ReadLine();
+
+            //generate random number
+            Random rd = new Random();
+            int coinToss = rd.Next(0,2);
+
+            Console.WriteLine(coinToss);
+
+            if  (coinToss == 0) //coin result = heads
+            {
+                if (userGuess == 0) //userGuess  = heads
+                {
+                    Console.WriteLine("Coin is Heads. You guess correctly.");
+                }
+                else
+                {
+                    Console.WriteLine("Coin is Tails. You guess wrong.");
+                }
+            }
+            else
+            {
+                if (userGuess == 1) //userGuess = Tails
+                {
+                    Console.WriteLine("Coin is Tails. You guess correctly.");
+                }
+                else
+                {
+                    Console.WriteLine("Coin is Heads. You guess wrong.");
+                }
+            }
+
+            Console.ReadLine();
+
         }
     }
 }
