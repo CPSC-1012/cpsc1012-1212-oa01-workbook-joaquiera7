@@ -36,24 +36,26 @@ namespace Question_1
 
             if  (coinToss == 0) //coin result = heads
             {
+                Console.WriteLine("Coin result is Heads.");
                 if (userGuess == 0) //userGuess  = heads
                 {
-                    Console.WriteLine("Coin is Heads. You guess correctly.");
+                    Console.WriteLine("Coin is Heads. Your guess is Heads. You guessed correctly.");
                 }
-                else
+                else if (userGuess == 1)
                 {
-                    Console.WriteLine("Coin is Tails. You guess wrong.");
+                    Console.WriteLine("Coin is Heads. Your guess is Tails. You guessed wrong.");
                 }
             }
-            else
+            else if (coinToss == 1)
             {
-                if (userGuess == 1) //userGuess = Tails
+                Console.WriteLine("Coin result is Tails.");
+                if (userGuess == 0) //userGuess = Tails
                 {
-                    Console.WriteLine("Coin is Tails. You guess correctly.");
+                    Console.WriteLine("Coin is Tails. Your guess is Heads. You guessed wrong.");
                 }
-                else
+                else if (userGuess == 1)
                 {
-                    Console.WriteLine("Coin is Heads. You guess wrong.");
+                    Console.WriteLine("Coin is Tails. Your guess is Tails. You guessed correctly.");
                 }
             }
 
