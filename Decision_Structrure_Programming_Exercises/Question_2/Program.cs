@@ -1,4 +1,17 @@
-﻿using System;
+﻿/*Purpose:  A program to determine if the input is a leap year.
+ * 
+ *input:    userInput
+ * 
+ *output:   result
+ * 
+ *Algorithm:1)prompt for user input/ year (userInput)
+ *          2)calculate if user input is a leap year.
+ *              >year is a leapyear if divisible by 4 but not 100
+ *              >year is a leapyear if divisible by 4 and 400
+ *          3)Display if userInput leap year or not
+ */
+
+using System;
 
 namespace Question_2
 {
