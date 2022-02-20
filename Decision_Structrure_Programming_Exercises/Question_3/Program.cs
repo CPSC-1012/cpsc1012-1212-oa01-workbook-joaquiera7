@@ -43,7 +43,7 @@ namespace Question_3
 
             if (userPick < 3)
             {
-                if (userPick > computerPick)    //user win
+                if (userPick > computerPick || userPick == 0)    //user win
                 {
                     if (userPick == 0 && computerPick == 1) //user lose
                     {
