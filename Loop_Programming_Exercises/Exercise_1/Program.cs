@@ -19,7 +19,34 @@ namespace Exercise_1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            int userAnswer;
+            bool validInput;
+            Random randomNumber = new Random();
+            string check;
+
+            int firstNumber = randomNumber.Next(1, 100);
+            int secondNumber = randomNumber.Next(1, 100);
+
+            int sum = firstNumber + secondNumber;
+
+            Console.Write($"{firstNumber} + {secondNumber} = ");
+            validInput = int.TryParse(Console.ReadLine(), out userAnswer);
+
+            while (validInput == false)
+            {
+                Console.WriteLine("Invalid Input. Try again.");
+                Console.Write($"{firstNumber} + {secondNumber} = ");
+                validInput = int.TryParse(Console.ReadLine(), out userAnswer);
+            }
+
+            if (userAnswer == sum)
+            {
+                Console.WriteLine("Correct.");
+            }
+            else
+            {
+                Console.WriteLine("Incorrect.");
+            }
         }
     }
 }
