@@ -22,7 +22,56 @@ namespace MathTutor02
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            int userAnswer; //user input
+            bool tryAgain = false;
+            int numberOfAttempts = 0;   //count number of attempts
+
+            //generate random number
+            Random randomNumber = new Random();
+            int firstNumber = randomNumber.Next(1, 100);
+            int secondNumber = randomNumber.Next(1, 100);
+
+            int sum = firstNumber + secondNumber;   //correct answer
+
+            do
+            {
+                userAnswer = PromptForIntegerValue($"{firstNumber} + {secondNumber} = ");
+                numberOfAttempts++;
+
+                if (userAnswer == sum)
+                {
+                    Console.WriteLine($"Correct. {numberOfAttempts} attempts made.");
+                    tryAgain = false;
+                }
+                else
+                {
+                    Console.Write("Incorrect. Try again (y/n)? ");
+                    tryAgain = char.ToLower(Console.ReadKey().KeyChar) == 'y' ? true : false;
+                    Console.WriteLine();
+
+                    if(tryAgain == false)
+                    {
+                        Console.WriteLine($"The correct answer is {sum}.");
+                    }
+                }
+
+            } while (tryAgain == true);
+            
+
+            static int PromptForIntegerValue(string message)
+            {
+                int integerValue = 0;
+                Console.Write(message);
+
+                while (int.TryParse(Console.ReadLine(), out integerValue) == false)
+                {
+                    //input value is not integer
+                    Console.WriteLine("Invalid Input. Enter an integer value.");
+                    Console.Write(message);      
+                }
+
+                return integerValue;   
+            }
         }
     }
 }
