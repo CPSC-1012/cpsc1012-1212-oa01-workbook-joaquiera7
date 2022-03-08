@@ -9,7 +9,7 @@ namespace Cpsc1012
     public class Utilities
     {
         /// <summary>
-        /// Prompt and check input for positive integer number.
+        /// This method will prompt and check input for positive integer number.
         /// </summary>
         /// <param name="message"></param>
         /// <returns>number</returns>

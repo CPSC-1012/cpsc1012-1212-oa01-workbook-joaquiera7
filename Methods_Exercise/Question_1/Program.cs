@@ -72,6 +72,5 @@ namespace Question_1
 
             return totalAmount;
         }
-        
     }
 }
