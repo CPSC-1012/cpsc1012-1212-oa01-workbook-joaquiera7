@@ -38,6 +38,13 @@ namespace Question2
             Console.WriteLine($"The total in seconds is {totalSeconds} seconds.");
         }
 
+        /// <summary>
+        /// This will calculate and return the total seconds.
+        /// </summary>
+        /// <param name="hours"></param>
+        /// <param name="minutes"></param>
+        /// <param name="seconds"></param>
+        /// <returns></returns>
         static int CalculateSeconds(int hours, int minutes, int seconds)
         {
             int totalInSeconds = 0;
