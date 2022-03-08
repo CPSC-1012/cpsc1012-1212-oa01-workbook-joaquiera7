@@ -20,10 +20,6 @@ namespace Question_5
 
             //result
             double totalGrossIncome = 0;
-
-            //charges
-            double airportTrip = 0;
-            double regularFare = 0;
             
 
             while (menuSelected > 1 || menuSelected < 4)
