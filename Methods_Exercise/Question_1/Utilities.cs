@@ -8,6 +8,11 @@ namespace Cpsc1012
 {
     public class Utilities
     {
+        /// <summary>
+        /// Prompt and check input for positive integer number.
+        /// </summary>
+        /// <param name="message"></param>
+        /// <returns>number</returns>
         static public int PromptForPositiveNumber(string message)
         {
             int number = 0;
@@ -15,7 +20,7 @@ namespace Cpsc1012
 
             while (validNumber == false)
             {
-                Console.WriteLine(message);
+                Console.Write(message);
                 if (int.TryParse(Console.ReadLine(), out number))
                 {
                     if (number > 0)
