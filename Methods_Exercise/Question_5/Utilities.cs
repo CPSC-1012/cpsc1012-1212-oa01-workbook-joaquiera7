@@ -73,6 +73,12 @@ namespace Cpsc1012
             }
             return number;
         }
+
+        /// <summary>
+        /// Prompt for a double Positive value. Zero is included.
+        /// </summary>
+        /// <param name="message"></param>
+        /// <returns></returns>
         static public double PromptForDoublePositiveOrZero(string message)
         {
             double number = 0;
