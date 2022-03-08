@@ -45,7 +45,7 @@ namespace Question_1
 
             //display result
             Console.WriteLine();
-            Console.WriteLine($"Your total change is {coinTotal}");
+            Console.WriteLine($"Your total change is {coinTotal:c}");
         }
 
         /// <summary>
