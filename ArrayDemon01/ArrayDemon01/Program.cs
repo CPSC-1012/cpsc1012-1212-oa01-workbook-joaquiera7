@@ -26,6 +26,8 @@ namespace ArrayDemon01
             {
                 Console.WriteLine($"Mark for student is {currentMark}"  );
             }
+
+
         }
     }
 }

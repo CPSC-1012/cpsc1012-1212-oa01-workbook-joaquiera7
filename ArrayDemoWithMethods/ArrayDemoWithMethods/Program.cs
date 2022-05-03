@@ -11,11 +11,18 @@ namespace ArrayDemoWithMethods
             Console.Write("Number of quick picks: ");
             numberOfQuickPicks = int.Parse(Console.ReadLine());
 
-            //for each quick pick generate 7 random numbers between 1-50 by calling GenerateNumbers method
-            int[] lottoNumbers = GenerateNumbers(1, 50, 7);
+            //Generate the quick picks
+            for (int counter = 1; counter <= numberOfQuickPicks; counter++)
+            {
+                //for each quick pick generate 7 random numbers between 1-50 by calling GenerateNumbers method
+                int[] lottoNumbers = GenerateNumbers(1, 50, 7);
 
-            //Display all the numbers generated
-            DisplayNumbers(lottoNumbers);
+                //Display all the numbers generated
+                Console.Write($"Quick Pick #{counter}: ");
+                DisplayNumbers(lottoNumbers);
+            }
+
+            
         }
 
         static int[] GenerateNumbers(int minValue, int maxValue, int numberCount)

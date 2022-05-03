@@ -1,0 +1,5 @@
+Idris Jama,10
+Jasper Cheng ,10
+Kent Chen,20
+Kevein Castrillo,20
+Nicholas Ekwom,30
